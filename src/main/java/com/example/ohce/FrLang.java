@@ -1,13 +1,19 @@
 package com.example.ohce;
 
-public class FrLang extends Message {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component("frWelcomeMsg")
+public class FrLang implements Message {
+    private final Timer timer;
+    public FrLang(Timer timer) {
+        this.timer = timer;
 
-    public FrLang() {
     }
 
 
-    public String welcomeMessage(Timer timer) {
+
+    public String welcomeMessage() {
         if(timer.getHeureSystem()<14){
             return WelcomeMessage.MATIN.getWelcomeMessageFr();
         } else if (timer.getHeureSystem()>=14 && timer.getHeureSystem()<18) {

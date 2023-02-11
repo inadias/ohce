@@ -1,11 +1,15 @@
 package com.example.ohce;
 
-public class EnLang  {
+import org.springframework.stereotype.Component;
 
-    public EnLang() {
+@Component("engWelcomeMsg")
+public class EnLang implements Message {
+
+    public EnLang(Timer timer) {
+        this.timer = timer;
     }
-
-    public String welcomeMessage(Timer timer) {
+    private Timer timer;
+    public String welcomeMessage() {
 
         if(timer.getHeureSystem()<14){
             return WelcomeMessage.MATIN.getWelcomeMessageEng();

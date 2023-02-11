@@ -1,17 +1,14 @@
 package com.example.ohce;
 
-import java.time.LocalTime;
+import org.springframework.stereotype.Component;
 
+import java.time.LocalTime;
+@Component("timer")
 public class Timer {
 
    private LocalTime timeNow = LocalTime.now();
-
-    LocalTime timeLimit = LocalTime.of(13,00);
-
     public int getHeureSystem() {
         return this.timeNow.getHour();
-
-
     }
 
 }

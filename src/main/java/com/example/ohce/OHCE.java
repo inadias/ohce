@@ -1,7 +1,5 @@
 package com.example.ohce;
 
-import org.apache.logging.log4j.message.Message;
-
 public class OHCE {
 
         private String value = "";
@@ -44,7 +42,7 @@ public class OHCE {
 
         String language= System.getProperty("user.language");
 
-        public String resultat(Timer timer ){
+       /* public String resultat(Timer timer){
 
             String newLine = System.getProperty("line.separator");
             if(language.equals("fr")){
@@ -60,6 +58,33 @@ public class OHCE {
             }
 
         }
+        */
+
+        //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    public String resultat(Timer timer, Message messageFr,Message messageEng){
+
+        String newLine = System.getProperty("line.separator");
+        if(language.equals("fr")){
+
+            return messageFr.welcomeMessage()+
+                    newLine+isPalindromeMessage()+
+                    newLine+customFarwelleMessageFr(timer);
+            //return getLangInterface+newLine+isPalindromeMessage()+newLine+customFarwelleMessage(timer);
+        }else {
+            return messageEng.welcomeMessage()+
+                    newLine+isPalindromeMessage()+
+                    newLine+customFarwelleMessageEng(timer);
+        }
+
+    }
+
+
+
+
+
+        //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
 
         public String customWelcomeMessageFr(Timer timer){
