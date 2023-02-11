@@ -1,5 +1,7 @@
 package com.example.ohce;
 
 public interface GetLangInterface {
-    public String getLang();
+    public String welcomeMessage(Timer timer);
+
+
 }

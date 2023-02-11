@@ -7,7 +7,17 @@ public class FrLang implements GetLangInterface {
     }
 
     @Override
-    public String getLang() {
-        return "fr-FR";
+    public String welcomeMessage(Timer timer) {
+        if(timer.getHeureSystem()<14){
+            return WelcomeMessage.MATIN.getWelcomeMessageFr();
+        } else if (timer.getHeureSystem()>=14 && timer.getHeureSystem()<18) {
+            return WelcomeMessage.APRESMIDI.getWelcomeMessageFr();
+        } else if (timer.getHeureSystem()>=18 && timer.getHeureSystem()<22) {
+            return WelcomeMessage.SOIR.getWelcomeMessageFr();
+        } else {
+            return WelcomeMessage.NUIT.getWelcomeMessageFr();
+
+        }
     }
+
 }

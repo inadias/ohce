@@ -14,6 +14,7 @@ class OhceApplicationTests {
     void inversedValue(){
         String intialValue="ana";
         Object getLang;
+
         OHCE iversevalue1=new OHCE(intialValue);
         OHCE iversevalue2=new OHCE("ziad");
         String resultat1= iversevalue1.inversedValue();
