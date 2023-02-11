@@ -1,12 +1,12 @@
 package com.example.ohce;
 
-public class FrLang implements GetLangInterface {
+public class FrLang extends Message {
 
 
     public FrLang() {
     }
 
-    @Override
+
     public String welcomeMessage(Timer timer) {
         if(timer.getHeureSystem()<14){
             return WelcomeMessage.MATIN.getWelcomeMessageFr();

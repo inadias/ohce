@@ -1,6 +1,6 @@
 package com.example.ohce;
 
-public class EnLang implements GetLangInterface {
+public class EnLang  {
 
     public EnLang() {
     }

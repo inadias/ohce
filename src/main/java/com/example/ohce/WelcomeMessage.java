@@ -1,9 +1,9 @@
 package com.example.ohce;
 
 public enum WelcomeMessage {
-    MATIN("Bonjour_am","Good_Morning",8),
-    APRESMIDI("Bonjour_pm","Good_Day",14),
-    SOIR("Bonjour_soir","Good_Everning",18),
+    MATIN("Bonjour_am","Good_Morning_am",8),
+    APRESMIDI("Bonjour_pm","Good morning_pm",14),
+    SOIR("Bonjour_soir","Good_Evening",18),
     NUIT("Bonjour_nuit","Good_Night",22);
 
 

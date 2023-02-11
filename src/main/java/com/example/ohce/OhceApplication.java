@@ -8,7 +8,7 @@ public class OhceApplication {
 
         OHCE show = new OHCE("radar");
         Timer hour= new Timer();
-        FrLang msg =new FrLang();
+       // FrLang msg =new FrLang();
 
 
       // System.out.println(show.resultat(hour,msg.welcomeMessage(hour)));

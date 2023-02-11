@@ -32,10 +32,6 @@ public class OHCE {
         }
 
 
-
-
-
-
         public String isPalindromeMessage()
         {
             if(language.equals("fr")){
@@ -46,7 +42,7 @@ public class OHCE {
 
         }
 
-        String language= "en" /*System.getProperty("user.language")*/;
+        String language= System.getProperty("user.language");
 
         public String resultat(Timer timer ){
 

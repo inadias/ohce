@@ -1,7 +1,7 @@
 package com.example.ohce;
 
-public interface GetLangInterface {
-    public String welcomeMessage(Timer timer);
+abstract class Message {
+     abstract public String welcomeMessage(Timer timer);
 
 
 }
