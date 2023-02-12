@@ -22,4 +22,19 @@ public class EnLang implements Message {
 
         }
     }
+
+    public String farwellMessage(){
+
+        if(timer.getHeureSystem()<14){
+            return FarwellMessage.MATIN.getFarwellMessageEng();
+        } else if (timer.getHeureSystem()>=14 && timer.getHeureSystem()<18) {
+            return FarwellMessage.APRESMIDI.getFarwellMessageEng();
+        } else if (timer.getHeureSystem()>=18 && timer.getHeureSystem()<22) {
+            return FarwellMessage.SOIR.getFarwellMessageEng();
+        } else {
+            return FarwellMessage.NUIT.getFarwellMessageEng();
+
+        }
+
+    }
 }

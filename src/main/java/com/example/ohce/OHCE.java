@@ -60,8 +60,6 @@ public class OHCE {
         }
         */
 
-        //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
     public String resultat(Timer timer, Message messageFr,Message messageEng){
 
         String newLine = System.getProperty("line.separator");
@@ -69,82 +67,18 @@ public class OHCE {
 
             return messageFr.welcomeMessage()+
                     newLine+isPalindromeMessage()+
-                    newLine+customFarwelleMessageFr(timer);
+                    newLine+messageFr.farwellMessage();
             //return getLangInterface+newLine+isPalindromeMessage()+newLine+customFarwelleMessage(timer);
         }else {
             return messageEng.welcomeMessage()+
                     newLine+isPalindromeMessage()+
-                    newLine+customFarwelleMessageEng(timer);
+                    newLine+messageEng.farwellMessage();
         }
 
     }
 
 
 
-
-
-        //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
-
-        public String customWelcomeMessageFr(Timer timer){
-
-            if(timer.getHeureSystem()<14){
-               return WelcomeMessage.MATIN.getWelcomeMessageFr();
-            } else if (timer.getHeureSystem()>=14 && timer.getHeureSystem()<18) {
-                return WelcomeMessage.APRESMIDI.getWelcomeMessageFr();
-            } else if (timer.getHeureSystem()>=18 && timer.getHeureSystem()<22) {
-               return WelcomeMessage.SOIR.getWelcomeMessageFr();
-            } else {
-               return WelcomeMessage.NUIT.getWelcomeMessageFr();
-
-            }
-
-        }
-        public String customFarwelleMessageFr(Timer timer) {
-
-            if (timer.getHeureSystem() < 14) {
-                return FarwellMessage.MATIN.getFarwellMessageFr();
-            } else if (timer.getHeureSystem() >= 14 && timer.getHeureSystem() < 18) {
-                return FarwellMessage.APRESMIDI.getFarwellMessageFr();
-            } else if (timer.getHeureSystem() >= 18 && timer.getHeureSystem() < 22) {
-                return FarwellMessage.SOIR.getFarwellMessageFr();
-            } else {
-                return FarwellMessage.NUIT.getFarwellMessageFr();
-            }
-        }
-
-            //*****************************************************************************
-
-            public String customWelcomeMessageEng(Timer timer){
-
-                if(timer.getHeureSystem()<14){
-                    return WelcomeMessage.MATIN.getWelcomeMessageEng();
-                } else if (timer.getHeureSystem()>=14 && timer.getHeureSystem()<18) {
-                    return WelcomeMessage.APRESMIDI.getWelcomeMessageEng();
-                } else if (timer.getHeureSystem()>=18 && timer.getHeureSystem()<22) {
-                    return WelcomeMessage.SOIR.getWelcomeMessageEng();
-                } else {
-                    return WelcomeMessage.NUIT.getWelcomeMessageEng();
-
-                }
-
-            }
-
-            public String customFarwelleMessageEng(Timer timer){
-
-                if(timer.getHeureSystem()<14){
-                    return FarwellMessage.MATIN.getFarwellMessageEng();
-                } else if (timer.getHeureSystem()>=14 && timer.getHeureSystem()<18) {
-                    return FarwellMessage.APRESMIDI.getFarwellMessageEng();
-                } else if (timer.getHeureSystem()>=18 && timer.getHeureSystem()<22) {
-                    return FarwellMessage.SOIR.getFarwellMessageEng();
-                } else {
-                    return FarwellMessage.NUIT.getFarwellMessageEng();
-
-                }
-
-        }
 
 
 

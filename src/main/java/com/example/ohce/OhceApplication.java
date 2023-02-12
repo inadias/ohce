@@ -13,20 +13,12 @@ public class OhceApplication {
 
         OHCE show = new OHCE("radar");
         Timer hour= new Timer();
-       // FrLang msg =new FrLang();
 
         Message messageEng = (Message) appContext.getBean("engWelcomeMsg");
         Message messageFr = (Message) appContext.getBean("frWelcomeMsg");
-
-
-
-
-      // System.out.println(show.resultat(hour,msg.welcomeMessage(hour)));
-
-
-        System.out.println(show.resultat(hour,messageFr,messageEng));
-
-
+        System.out.println("*************************************************");
+        System.out.println( show.resultat(hour,messageFr,messageEng));
+        System.out.println("*************************************************");
 
 
         // TODO PERSONALISATION DES MESSAGE SELON LEUR ET LANGAGE SYSTEM

@@ -26,4 +26,17 @@ public class FrLang implements Message {
         }
     }
 
+    public String farwellMessage() {
+
+        if (timer.getHeureSystem() < 14) {
+            return FarwellMessage.MATIN.getFarwellMessageFr();
+        } else if (timer.getHeureSystem() >= 14 && timer.getHeureSystem() < 18) {
+            return FarwellMessage.APRESMIDI.getFarwellMessageFr();
+        } else if (timer.getHeureSystem() >= 18 && timer.getHeureSystem() < 22) {
+            return FarwellMessage.SOIR.getFarwellMessageFr();
+        } else {
+            return FarwellMessage.NUIT.getFarwellMessageFr();
+        }
+    }
+
 }
