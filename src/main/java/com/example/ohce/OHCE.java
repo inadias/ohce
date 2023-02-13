@@ -29,10 +29,13 @@ public class OHCE {
 
         }
 
+        public String getSystemLanguage(){
+            return   System.getProperty("user.language");
+        }
 
         public String isPalindromeMessage()
         {
-            if(language.equals("fr")){
+            if(getSystemLanguage().equals("fr")){
                 return this.value.toLowerCase().equals(this.inversedValue()) ? ResultMessage.SUCCESS_MESSAGE.getFrenchSucessMessage() : this.value;
             }else {
                 return this.value.toLowerCase().equals(this.inversedValue()) ? ResultMessage.SUCCESS_MESSAGE.getEnglishSucessMessage() : this.value;
@@ -40,49 +43,23 @@ public class OHCE {
 
         }
 
-        String language= System.getProperty("user.language");
 
-       /* public String resultat(Timer timer){
+
+        public String resultat(Message messageFr,Message messageEng){
 
             String newLine = System.getProperty("line.separator");
-            if(language.equals("fr")){
+            if(getSystemLanguage().equals("fr")){
 
-            return customWelcomeMessageFr(timer)+
-                    newLine+isPalindromeMessage()+
-                    newLine+customFarwelleMessageFr(timer);
-            //return getLangInterface+newLine+isPalindromeMessage()+newLine+customFarwelleMessage(timer);
-            }else {
-                return customWelcomeMessageEng(timer)+
+                return messageFr.welcomeMessage()+
                         newLine+isPalindromeMessage()+
-                        newLine+customFarwelleMessageEng(timer);
+                        newLine+messageFr.farwellMessage();
+            }else {
+                return messageEng.welcomeMessage()+
+                        newLine+isPalindromeMessage()+
+                        newLine+messageEng.farwellMessage();
             }
 
-        }
-        */
-
-    public String resultat(Timer timer, Message messageFr,Message messageEng){
-
-        String newLine = System.getProperty("line.separator");
-        if(language.equals("fr")){
-
-            return messageFr.welcomeMessage()+
-                    newLine+isPalindromeMessage()+
-                    newLine+messageFr.farwellMessage();
-            //return getLangInterface+newLine+isPalindromeMessage()+newLine+customFarwelleMessage(timer);
-        }else {
-            return messageEng.welcomeMessage()+
-                    newLine+isPalindromeMessage()+
-                    newLine+messageEng.farwellMessage();
-        }
-
-    }
-
-
-
-
-
-
-
+         }
 
 
 }

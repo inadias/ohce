@@ -10,18 +10,13 @@ public class OhceApplication {
         AnnotationConfigApplicationContext appContext = new AnnotationConfigApplicationContext();
         appContext.scan("com.example.ohce");
         appContext.refresh();
-
-        OHCE show = new OHCE("radar");
-        Timer hour= new Timer();
-
+        InputCli cli= new InputCli();
+        OHCE show = new OHCE(cli.inputValue());
         Message messageEng = (Message) appContext.getBean("engWelcomeMsg");
         Message messageFr = (Message) appContext.getBean("frWelcomeMsg");
         System.out.println("*************************************************");
-        System.out.println( show.resultat(hour,messageFr,messageEng));
+        System.out.println( show.resultat(messageFr,messageEng));
         System.out.println("*************************************************");
-
-
-        // TODO PERSONALISATION DES MESSAGE SELON LEUR ET LANGAGE SYSTEM
 
     }
 

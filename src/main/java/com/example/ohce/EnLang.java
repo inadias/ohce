@@ -11,7 +11,7 @@ public class EnLang implements Message {
     private Timer timer;
     public String welcomeMessage() {
 
-        if(timer.getHeureSystem()<14){
+        if(timer.getHeureSystem()>4 && timer.getHeureSystem()<14 ){
             return WelcomeMessage.MATIN.getWelcomeMessageEng();
         } else if (timer.getHeureSystem()>=14 && timer.getHeureSystem()<18) {
             return WelcomeMessage.APRESMIDI.getWelcomeMessageEng();
